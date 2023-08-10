@@ -1,0 +1,114 @@
+/*ESTILOS GENERALES, COMUNES A TODOS LOS DOCUMENTOS */
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    /*Asi el padding se sustrae del modelo de caja del elemento*/
+}
+
+html,body {
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    display: flex;
+    justify-content: center;
+    /*Centrado horizontal*/
+    align-items: center;
+    /*Centrado vertical*/
+    width: 100%;
+    background-color: gray;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+/*Principal*/
+.principal {
+    display: flex;
+    max-width: 768px;
+    min-width: 320px;
+    width: 100%;
+}
+
+/*Columnas*/
+
+.columna {
+    color: white;
+    padding: 2rem;
+    width: 25%;
+    overflow: hidden;
+    /*Esto hace que el contenido que supera el contenedor(la cajita) se oculte y no se salga por fuera*/
+    transition: width .3s ease-in-out;
+    /*Pasar de punto A a B, es movimiento horizontal, de ahi width | segundos que dura la transicion 
+    | efecto, en este caso aceleracion al principio y al final */
+    cursor: pointer; /*Esto hace que en todo "columna" el raton tenga la forma como cuando alguien pincha un link*/
+}
+
+.columna.activa {
+    width: 50%;
+    
+}
+
+
+.columna:first-of-type {
+    border-radius: 0.5rem 0px 0px 0.5rem;
+}
+
+.columna:last-of-type {
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+}
+
+.sedans {
+    background-color: hsl(31, 77%, 52%);
+}
+
+.suvs {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+    background-color: hsl(179, 100%, 13%);
+}
+
+/*Fin tipo de columnas */
+
+
+/*titulo*/
+.titulo {
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+}
+
+/*Texto*/
+.texto {
+    font-size: 14px;
+    margin-bottom: 3rem;
+}
+
+/*Enlace*/
+.enlace {
+    background-color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 14px;
+}
+
+.sedans .enlace {
+    color: hsl(31, 77%, 52%);
+}
+
+.suvs .enlace {
+    color: hsl(184, 100%, 22%);
+}
+
+.luxury .enlace {
+    color: hsl(179, 100%, 13%);
+}
